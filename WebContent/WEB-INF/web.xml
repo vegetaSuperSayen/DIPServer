@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<servlet>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>com.dip.servlets.FileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/fileupload</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UploadFormServlet</servlet-name>
+		<servlet-class>com.dip.servlets.UploadFormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadFormServlet</servlet-name>
+		<url-pattern>/uploadform</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>com.dip.servlets.IndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/TagLib.jsp</include-prelude>
+			<include-coda>/WEB-INF/Footer.jsp</include-coda>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
